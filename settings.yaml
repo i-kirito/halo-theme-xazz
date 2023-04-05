@@ -1,7 +1,7 @@
 apiVersion: v1alpha1
 kind: Setting
 metadata:
-  name: theme-butterfly-setting
+  name: theme-xazz-setting
 spec:
   forms:
     - group: base
