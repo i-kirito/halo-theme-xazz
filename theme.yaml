@@ -9,8 +9,8 @@ spec:
     logo: /themes/theme-xazz/assets/images/iloli.gif
     website: https://ikirito.me
     repo: https://github.com/i-kirito/halo-theme-xazz.git
-    settingName: theme-xazz-setting
-    configMapName: theme-xazz-configMap
+    settingName: "theme-xazz-setting"
+    configMapName: "theme-xazz-configMap"
     version: 1.0.0
     require: 2.0.0
 metadata:

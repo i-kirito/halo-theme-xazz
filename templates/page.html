@@ -31,12 +31,19 @@
     <script type="text/javascript" th:src="${assets_link+'/plugins/prism/prism.min.js'}"></script>
   </th:block>
   <link rel="stylesheet" th:href="${assets_link+'/css/single.min.css' + theme_version}">
+  <!-- botui机器人 -->
+  <link rel="stylesheet" th:href="${assets_link+'/css/botui.min.css'}">
+  <link rel="stylesheet" th:href="${assets_link+'/css/botui-theme-default.css'}">
   <script id="single-script" th:inline="javascript">
     window.PageConfig = {
       code:/*[[${theme.config.code}]]*/ {},
     };
     document.getElementById('single-script').remove();
   </script>
+  <!-- botui -->
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <script type="text/javascript" th:src="${assets_link+'/js/botui.js'}"></script>
+  
 </th:block>
 
 <section

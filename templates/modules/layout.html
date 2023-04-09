@@ -19,6 +19,7 @@
   <link rel="apple-touch-icon" sizes="180x180" th:href="${site.logo}">
   <link rel="canonical" th:href="${site.url}">
   <script id="base-script" th:inline="javascript">
+  
     window.ThemeVersion = /*[[${theme.spec.version}]]*/ {};
     const locDataTheme = localStorage.getItem('Butterfly-data-theme');
     if (locDataTheme) {
