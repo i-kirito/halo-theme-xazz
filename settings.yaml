@@ -126,18 +126,30 @@ spec:
           value: 'data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs='
           help: 加载失败图片，默认 data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=
           validation: required
-    
-    #
-    #    - group: nav
-    #      label: 导航
-    #      formSchema:
-    #        - $formkit: text
-    #          name: font_color_light
-    #          label: 导航字体颜色
-    #          placeholder: 请填写 导航字体颜色
-    #          value: '#eee'
-    #          help: '导航字体颜色，默认 #eee'
-    #          validation: required
+
+    # - group: nav
+    #   label: 导航
+    #   formSchema:
+        # - $formkit: text
+        #   name: font_color_light
+        #   label: 导航字体颜色
+        #   placeholder: 请填写 导航字体颜色
+        #   value: '#eee'
+        #   help: '导航字体颜色，默认 #eee'
+        #   validation: required
+        # - $formkit: text
+        #   name: subtitle
+        #   label: 导航栏左上角标题
+        #   placeholder: 请填入 导航栏标题
+        #   value: ''
+        #   help: 修改导航栏标题可与封面标题不一样
+        #   validation: required
+        # - $formkit: attachment
+        #   name: above_logo
+        #   label: 导航栏logo
+        #   placeholder: 请选择 导航栏logo
+        #   value: ''
+        #   help: 导航栏logo导入后，文字效果将失效（暂未支持）
 
     - group: card
       label: 卡片
@@ -260,7 +272,7 @@ spec:
           name: above_background
           label: 第一屏背景图
           placeholder: 请填写 第一屏背景图
-          value: 'https://fastly.jsdelivr.net/npm/halo-theme-butterfly@latest/above.png'
+          value: 'https://cdn.xazz.top/background.jpg'
           help: 如果全局背景图设置为图片链接，则此处背景图将不生效
           validation: required
         - $formkit: textarea
@@ -350,7 +362,7 @@ spec:
           name: above_background
           label: 第一屏背景图
           placeholder: 请填写 第一屏背景图
-          value: 'https://fastly.jsdelivr.net/npm/halo-theme-butterfly@latest/above.png'
+          value: 'https://cdn.xazz.top/background.jpg'
           help: 如果全局背景图设置为图片链接，则此处背景图将不生效
           validation: required
         - $formkit: text
@@ -358,6 +370,68 @@ spec:
           label: 自定义标题
           placeholder: 请填写 自定义标题
           value: 归档
+          help: 请填写 自定义标题
+          validation: required
+
+    - group: links
+      label: 友链
+      formSchema:
+        - $formkit: radio
+          name: enable_above
+          label: 启用第一屏
+          help: 启用首页第一屏
+          value: true
+          options:
+            - label: 启用
+              value: true
+            - label: 禁用
+              value: false
+        - $formkit: attachment
+          name: above_background
+          label: 第一屏背景图
+          placeholder: 请填写 第一屏背景图
+          value: 'https://cdn.xazz.top/background.jpg'
+          help: 如果全局背景图设置为图片链接，则此处背景图将不生效
+          validation: required
+        - $formkit: text
+          name: custom_title
+          label: 自定义标题
+          placeholder: 请填写 自定义标题
+          value: '友链'
+          help: 请填写 自定义标题
+          validation: required
+        - $formkit: text
+          name: links_title
+          label: 自定义友链标题
+          placeholder: 请填写 自定义友链标题
+          value: '欢迎大家交换友链哦 ~'
+          help: 请填写 自定义友链标题
+
+    - group: photos
+      label: 图库
+      formSchema:
+        - $formkit: radio
+          name: enable_above
+          label: 启用第一屏
+          help: 启用首页第一屏
+          value: true
+          options:
+            - label: 启用
+              value: true
+            - label: 禁用
+              value: false
+        - $formkit: attachment
+          name: above_background
+          label: 第一屏背景图
+          placeholder: 请填写 第一屏背景图
+          value: 'https://cdn.xazz.top/background.jpg'
+          help: 如果全局背景图设置为图片链接，则此处背景图将不生效
+          validation: required
+        - $formkit: text
+          name: custom_title
+          label: 自定义标题
+          placeholder: 请填写 自定义标题
+          value: '图库'
           help: 请填写 自定义标题
           validation: required
 
@@ -378,7 +452,7 @@ spec:
           name: above_background
           label: 第一屏背景图
           placeholder: 请填写 第一屏背景图
-          value: 'https://fastly.jsdelivr.net/npm/halo-theme-butterfly@latest/above.png'
+          value: 'https://cdn.xazz.top/background.jpg'
           help: 如果全局背景图设置为图片链接，则此处背景图将不生效
           validation: required
         - $formkit: text
@@ -416,7 +490,7 @@ spec:
           name: above_background
           label: 第一屏背景图
           placeholder: 请填写 第一屏背景图
-          value: 'https://fastly.jsdelivr.net/npm/halo-theme-butterfly@latest/above.png'
+          value: 'https://cdn.xazz.top/background.jpg'
           help: 如果全局背景图设置为图片链接，则此处背景图将不生效
           validation: required
         - $formkit: text
@@ -454,7 +528,7 @@ spec:
           name: above_background
           label: 第一屏背景图
           placeholder: 请填写 第一屏背景图
-          value: 'https://fastly.jsdelivr.net/npm/halo-theme-butterfly@latest/above.png'
+          value: 'https://cdn.xazz.top/background.jpg'
           help: 如果全局背景图设置为图片链接，则此处背景图将不生效
           validation: required
         - $formkit: radio

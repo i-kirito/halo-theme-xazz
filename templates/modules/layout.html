@@ -3,7 +3,7 @@
       th:fragment="layout (page,title,head,above,content,js)"
       th:with="assets_link=${theme.config.other.enable_cdn_link ? theme.config.other.cdn_link : #theme.assets('/')},random_img = ${theme.config.loading.enable_random_img ? theme.config.loading.random_img : 'null'},theme_version = ${'?v='+ theme.spec.version} ">
 <head th:with="is_body_bg_http = ${#strings.containsIgnoreCase(theme.config.style.body_background,'http')}">
-  <title th:text="${title}"></title>
+  <title th:text="${site.subtitle}"></title>
   <meta charset="UTF-8"/>
   <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, shrink-to-fit=no, viewport-fit=cover">
@@ -198,7 +198,7 @@
   <!--/* footer--><!--*/-->
   <footer class="footer text-center">
     <div class="copyright"
-         th:text="'© 2020 - '+${#dates.format(#dates.createNow(), 'yyyy')}+' By '+ ${site.title}"></div>
+         th:text="'© 2023 - '+${#dates.format(#dates.createNow(), 'yyyy')}+' By '+ ikirito"></div>
     <div class="icp" th:if="${not #strings.isEmpty(theme.config.base.icp)}">
       <a th:text="'备案号：'+${theme.config.base.icp}"
          href="https://beian.miit.gov.cn/?token=0a8070f6-065c-4796-89be-75528400a7a4#/Integrated/index">
